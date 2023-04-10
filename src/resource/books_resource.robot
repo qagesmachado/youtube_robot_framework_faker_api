@@ -41,7 +41,9 @@ GET Livro - Validação Data
         ${data}    Set Variable    ${GET_RESPONSE.json()['data'][${i}]['published']}    
         Log To Console    ${GET_RESPONSE.json()['data'][${i}]['published']}
 
-        Separação Data Livro   ${data} 
+        ${ano}    ${mes}    ${dia}    Separação Data Livro   ${data} 
+
+        Log To Console    Publicado no dia ${dia} do mês ${mes} e ano de ${ano}
 
     END
 
@@ -50,3 +52,8 @@ Separação Data Livro
 
     @{words}    Split String    ${data}  -
     Log To Console   ${words}
+    ${ano}  Set Variable    ${words}[0]
+    ${mes}  Set Variable    ${words}[1]
+    ${dia}  Set Variable    ${words}[2]
+
+    [Return]       ${ano}    ${mes}    ${dia}
