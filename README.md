@@ -1,4 +1,4 @@
-# eu_qa_robot_faker_api
+# youtube_robot_framework_faker_api
 
 ### Yoube playlist
 https://www.youtube.com/playlist?list=PLVQdoQTyi01ifjkQkXsApB-vyQj05QZAy
